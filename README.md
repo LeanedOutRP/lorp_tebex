@@ -1,4 +1,4 @@
-# 🛒 ULOG Tebex Store - Complete Setup Guide
+# 🛒 Complete Setup Guide
 
 A modern, premium FiveM store frontend integrated with Tebex Headless API, featuring Discord OAuth authentication, product reviews, and a beautiful UI.
 
@@ -395,12 +395,12 @@ sudo mysql
 
 # Create dedicated user
 CREATE USER 'ulog_user'@'localhost' IDENTIFIED BY 'strong_password_here';
-GRANT ALL PRIVILEGES ON ulog_reviews.* TO 'ulog_user'@'localhost';
+GRANT ALL PRIVILEGES ON reviews.* TO 'ulog_user'@'localhost';
 FLUSH PRIVILEGES;
 
 # Create database (if not exists)
-CREATE DATABASE ulog_reviews CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE ulog_reviews;
+CREATE DATABASE reviews CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE reviews;
 
 # Create reviews table (same as localhost)
 CREATE TABLE reviews (
@@ -796,7 +796,7 @@ Fetches reviews and stats for a product.
 | `DB_PORT` | MySQL port | `3306` |
 | `DB_USER` | MySQL user | `root` |
 | `DB_PASSWORD` | MySQL password | `password` |
-| `DB_NAME` | MySQL database | `ulog_reviews` |
+| `DB_NAME` | MySQL database | `reviews` |
 
 ### Client Variables
 
@@ -832,7 +832,7 @@ Fetches reviews and stats for a product.
 ## 📦 Project Structure
 
 ```
-ulog_tebex_site_v2/
+lorp_tebex/
 ├── client/                 # Frontend (React + Vite)
 │   ├── src/
 │   │   ├── components/    # Reusable components
